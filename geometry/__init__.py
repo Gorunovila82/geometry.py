@@ -10,7 +10,7 @@ PATH = __file__[:-11]
 
 def _download(r):
     res = requests.get(r["zipball_url"]).content
-    f = PATH + "v"+r["tag_name"]+".zip"
+    f = PATH + "upd/v"+r["tag_name"]+".zip"
     open(f,"wb").write(res)
     print(f"Распакуйте обновление {f}!")
     
